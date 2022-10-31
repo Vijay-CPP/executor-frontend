@@ -1,0 +1,21 @@
+.navbar {
+  background-color: #007393;
+}
+
+.navbar-heading {
+  color: aliceblue;
+  margin: 5px auto;
+}
+
+
+@media (min-width:1400px){
+  .navbar {
+    background-color: #007393;
+  }
+  
+  .navbar-heading {
+    color: aliceblue;
+    margin: 10px auto;
+  }
+  
+}

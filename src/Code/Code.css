@@ -1,0 +1,75 @@
+@font-face {
+  font-family: consolas;
+  src: url("../Fonts/CONSOLA.TTF");
+}
+
+.code {
+    text-align: center;
+}
+
+.code-select {
+  width: 40vw;
+  margin: 10px auto;
+}
+
+.code-textarea {
+  width: 40vw;
+  height: 60vh;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: consolas;
+}
+
+.code-btn{
+    width: 40vw;
+}
+
+@media (min-width:1400px){
+  .code-select {
+    width: 40vw;
+    margin: 20px auto;
+  }
+  
+  .code-textarea {
+    width: 40vw;
+    height: 40vh;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: consolas;
+  }
+  
+  .code-btn{
+      width: 40vw;
+  }
+}
+
+@media (max-width:700px){
+  .code-select {
+    width: 90vw;
+    margin: 20px auto;
+  }
+  
+  .code-textarea {
+    width: 90vw;
+    height: 40vh;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: consolas;
+  }
+  
+  .code-btn{
+      width: 90vw;
+  }
+}
