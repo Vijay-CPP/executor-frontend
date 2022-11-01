@@ -42,7 +42,7 @@ function App() {
       body: JSON.stringify(obj)
     };
 
-    fetch("http://localhost:9000/", options)
+    fetch("https://executor-backend.vercel.app/", options)
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
