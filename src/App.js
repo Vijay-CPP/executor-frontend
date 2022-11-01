@@ -8,14 +8,14 @@ function App() {
   let [op, setOp] = useState("");
   let [mem, setMem] = useState("0");
   let [time, setTime] = useState("0");
+  let [isLoading, setIsLoading] = useState(false);
 
   function clickie() {
     let code = document.getElementsByClassName("code-textarea")[0].value;
     let details = document.getElementsByClassName("code-select")[0].value;
     let input = document.getElementsByClassName("inp-textarea")[0].value;
 
-    if(details === "")
-    {
+    if (details === "") {
       alert("Kindly select your language!")
       return;
     }
@@ -42,6 +42,8 @@ function App() {
       body: JSON.stringify(obj)
     };
 
+    setIsLoading(true);
+
     fetch("https://executor-backend.vercel.app/", options)
       .then((res) => res.json())
       .then((data) => {
@@ -49,13 +51,15 @@ function App() {
         setOp(data.output)
         setMem(data.memory)
         setTime(data.cpuTime)
-      });
+      }).finally(() => {
+        setIsLoading(false);
+      })
   }
 
   return (
     <div className="App">
-      <Navbar/>
-      <Body run={clickie} info={[op, mem, time]} />
+      <Navbar />
+      <Body run={clickie} info={[op, mem, time, isLoading]} />
     </div>
   );
 }
